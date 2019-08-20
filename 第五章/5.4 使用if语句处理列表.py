@@ -16,3 +16,5 @@ else:
 #使用多个列表
 available_topping=['mushrooms','olives','green peppers',
                    'pepperoni','pineapple','extra cheese']
+for list in available_topping:
+    print(list)
