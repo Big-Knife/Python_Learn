@@ -16,6 +16,9 @@ else:
 #使用多个列表
 available_topping=['mushrooms','olives','green peppers',
                    'pepperoni','pineapple','extra cheese']
-for list in available_topping:
-    print(list)
-#哈哈哈哈 这个将会非常的有意思
+requested_toppings=['mushrooms','french fries','extra cheese']
+for requested_topping in requested_toppings:
+    if requested_topping in available_topping:
+        print("可以添加"+requested_topping)
+    else:
+        print("我们没有"+requested_topping)
