@@ -24,3 +24,18 @@ else:
     x_increment=3
 alien_0['x_position']=alien_0['x_position']+x_increment
 print("新的x轴坐标位置："+str(alien_0['x_position']))
+
+#删除键值对
+alien_0={'color':'green','points':5}
+print(alien_0)
+del alien_0['points']
+print(alien_0)
+#被删除的键值永远消失
+
+favorite_languages={
+    'jen':'python',
+    'sarah':'c',
+    'reward':'ruby',
+    'phil':'python',
+    }
+print("Jen最喜欢的编程语言是"+favorite_languages['jen'].title())
