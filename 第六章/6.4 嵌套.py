@@ -44,3 +44,23 @@ pizza={
 print("披萨的厚度:"+pizza['crust'].title())
 for topping in pizza['toppings']:
     print("披萨配料："+topping.title())
+
+#在字典中储存字典
+users={
+    'aeinstein':{
+        'first':'albert',
+        'last':'einstein',
+        'location':'princeton',
+    },
+    'mcurie':{
+    'first':'marie',
+    'last':'curie',
+    'location':'paris',},
+}
+for user_name,user_info in users.items():
+    print("\n用户名："+user_name.title())
+    full_name=user_info['first']+" "+user_info['last']
+    location=user_info['location']
+
+    print("全名："+full_name.title())
+    print("地点："+location.title())
