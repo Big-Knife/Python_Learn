@@ -20,3 +20,8 @@ if 'erin' not in name:
 #按照顺序列出键
 for name in sorted(favorite_languages.keys()):
     print(name)
+
+
+print("大家喜欢的编程语言有以下几种：")
+for language in set(favorite_languages.values()):
+    print(language)
