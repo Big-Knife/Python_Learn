@@ -25,10 +25,21 @@ while 'cat' in pets:
 print(pets)
 
 #使用用户输入来填充字典
-responses = []
+responses = {}
 #设置一个标志，指出调查是否继续
 polling_active = True
 while polling_active:
     #提示输入被调查者的名字和回答
-    name= input("\n你叫什么名字？")
+    name = input("\n你叫什么名字？")
+    response = input("有时间你想爬哪座山？")
+    #将答卷储存在字典中
     responses[name] = response
+    #看看是否还有人要参于调查
+    repeat = input("你参加了问卷调查了吗(yes/no)")
+    if repeat == 'yes':
+        polling_active = False
+#调查结束，显示结果
+print(responses)
+print("\n调查结果")
+for name,response in responses.items():
+    print("姓名：" + name + "\n想爬的山：" + response)
