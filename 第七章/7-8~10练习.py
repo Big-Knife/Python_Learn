@@ -1,11 +1,11 @@
 # 熟食店
-'''sandwiche_orders=['原味','加辣','海鲜']
+sandwiche_orders=['原味','加辣','海鲜']
 finished_sandwiches=[]
 while sandwiche_orders:
     current=sandwiche_orders.pop()
     finished_sandwiches.append(current)
 for finished_sandwiche in finished_sandwiches:
-    print(finished_sandwiche)'''
+    print(finished_sandwiche)
 
 # 五香烟熏牛肉
 sandwich_orders = [
