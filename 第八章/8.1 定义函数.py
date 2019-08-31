@@ -13,3 +13,5 @@ def describe_pet(animal_type,pet_name):
     print("我有一只：" + animal_type)
     print("我的" + animal_type + "名字叫：" + pet_name)
 describe_pet('老虎','小白')
+#关键字实参
+describe_pet(animal_type='老虎',pet_name='小白')
