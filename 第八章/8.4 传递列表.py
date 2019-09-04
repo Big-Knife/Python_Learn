@@ -24,3 +24,6 @@ while unprinted_designs:
 print("\nThe following models have been printed:")
 for completed_model in completed_models:
     print(completed_model)
+
+#第二种效率更高的方式实现同样效果
+def print_models
