@@ -24,3 +24,5 @@ my_dog.sit()
 print("\nMy dog's name is " + your_dog.name.title() + ".")
 print("My dog is " + str(your_dog.age) + " years old.")
 your_dog.sit()
+
+
