@@ -5,6 +5,7 @@ class Restaurant():
         '''初始化餐馆'''
         self.restaurant_name = restaurant_name.title()
         self.cuisine_type = cuisine_type
+        self.number_served = 0
 
     def describe_restaurant(self):
         '''显示餐馆摘要'''
@@ -16,6 +17,9 @@ class Restaurant():
         msg = self.restaurant_name + " is open. Come on in!"
         print("\n" + msg)
 
+    def set_number_served(self,people):
+        self.number_served = people
+
 restaurant = Restaurant('the mean queen', 'pizza')
 
 print(restaurant.restaurant_name)
@@ -23,6 +27,9 @@ print(restaurant.cuisine_type)
 
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
+
+restaurant.set_number_served(90)
+print(restaurant.number_served)
 
 
 #9-2
