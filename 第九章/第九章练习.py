@@ -20,6 +20,9 @@ class Restaurant():
     def set_number_served(self,people):
         self.number_served = people
 
+    def increment_number_served(self,additional_served):
+        self.number_served += additional_served
+
 restaurant = Restaurant('the mean queen', 'pizza')
 
 print(restaurant.restaurant_name)
@@ -29,6 +32,7 @@ restaurant.describe_restaurant()
 restaurant.open_restaurant()
 
 restaurant.set_number_served(90)
+restaurant.increment_number_served(10)
 print(restaurant.number_served)
 
 
@@ -43,6 +47,7 @@ class User():
         self.username = username
         self.email = email
         self.location = location.title()
+        self.login_attempts = 0
 
     def describe_user(self):
         """显示用户信息摘要。"""
@@ -55,9 +60,22 @@ class User():
         """它向用户发出个性化的问候。"""
         print("\nWelcome back, " + self.username + "!")
 
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
 eric = User('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska')
 eric.describe_user()
 eric.greet_user()
+eric.increment_login_attempts()
+eric.increment_login_attempts()
+eric.increment_login_attempts()
+print("Login attempts:" + str(eric.login_attempts))
+print("Resetting login attempts...")
+eric.reset_login_attempts()
+print("Login attempts:" + str(eric.login_attempts))
 
 willie = User('willie', 'burger', 'willieburger', 'wb@example.com', 'alaska')
 willie.describe_user()
