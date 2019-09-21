@@ -29,6 +29,16 @@ class ElectricCar(Car):
     def __init__(self,make,model,year):
         '''初始化父类的属性'''
         super().__init__(make,model,year)
+        self.battery_size = 70
+
+    def describe_battery(self):
+        '''描述电池容量的信息'''
+        print("This car has a " + str(self.battery_size) + "-kWh battery.")
+
+    def fill_gas_tank():
+        '''ElectricCar Not Fill'''
+        print("This car doesn't need a gas tank!")
 
 my_tesla = ElectricCar('tesla','model s',2016)
 print(my_tesla.get_descripive_name())
+my_tesla.describe_battery()
