@@ -5,14 +5,14 @@ class Car():
         self.make = make
         self.model = model
         self.year = year
-        self.odomemter_reading = 0
+        self.odometer_reading = 0
 
-    def get_descripive_name(self):
+    def get_descriptive_name(self):
         long_name = str(self.year) + ' ' + self.make + ' ' + self.model
         return long_name
 
     def read_odometer(self):
-        print("This car has " + str(self.odomemter_reading) + " miles on it.")
+        print("This car has " + str(self.odometer_reading) + " miles on it.")
 
     def update_odometer(self,mileage):
         if mileage >= self.odomemter_reading:
