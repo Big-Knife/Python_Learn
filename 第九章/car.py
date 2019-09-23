@@ -49,4 +49,8 @@ class ElectricCar(Car):
     def __init__(self,make,model,year):
         '''初始化父类的属性'''
         super().__init__(make,model,year)
-        self.battery = Battery
+        self.battery = Battery()
+
+my_tesla = ElectricCar('tesla','model s',2016)
+print(my_tesla.get_descriptive_name())
+my_tesla.battery.describe_battery()
