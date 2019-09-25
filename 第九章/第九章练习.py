@@ -96,3 +96,29 @@ big_one = IceCreamStand('The Big One')
 big_one.flavors = ['vanilla','chocolate','black cherry']
 big_one.describe_restaurant()
 big_one.show_flavors()
+
+class Admin(User):
+    '''有管理权限的用户'''
+
+    def __init__(self,fitst_name,last_name,username,
+                 email,location):
+        '''初始化管理员'''
+        super().__init__(fitst_name,last_name,username,email,location)
+        self.privileges = []
+
+    def show_privileges(self):
+        '''显示当前管理员权限'''
+        print("\n Privileges:")
+        for privilege in self.privileges:
+            print("- " + privilege)
+
+eric = Admin('eric','matthes','e_matthes',
+                     'e_matthes@example.com','alaska')
+eric.describe_user()
+eric.privileges = [
+    'can reset passwords',
+    'can moderate discussions',
+    'can suspend accounts',
+    ]
+
+eric.show_privileges()
