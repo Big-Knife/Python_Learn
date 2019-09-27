@@ -104,21 +104,33 @@ class Admin(User):
                  email,location):
         '''初始化管理员'''
         super().__init__(fitst_name,last_name,username,email,location)
-        self.privileges = []
+        self.privileges = Privileges()
+
+class Privileges():
+    """一个存储管理员权限的类。"""
+
+    def __init__(self, privileges=[]):
+        self.privileges = privileges
 
     def show_privileges(self):
-        '''显示当前管理员权限'''
-        print("\n Privileges:")
-        for privilege in self.privileges:
-            print("- " + privilege)
+        print("\nPrivileges:")
+        if self.privileges:
+            for privilege in self.privileges:
+                print("- " + privilege)
+        else:
+            print("- This user has no privileges.")
 
-eric = Admin('eric','matthes','e_matthes',
-                     'e_matthes@example.com','alaska')
+
+eric = Admin('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska')
 eric.describe_user()
-eric.privileges = [
+
+eric.privileges.show_privileges()
+
+print("\nAdding privileges...")
+eric_privileges = [
     'can reset passwords',
     'can moderate discussions',
     'can suspend accounts',
     ]
-
-eric.show_privileges()
+eric.privileges.privileges = eric_privileges
+eric.privileges.show_privileges()
