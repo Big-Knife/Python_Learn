@@ -12,3 +12,4 @@ with open(file_name) as file_object:
         #用rstrip()删除内容空格
         print(line.rstrip())
 
+###
