@@ -16,3 +16,15 @@ with open(filename) as f:
 
 for line in lines:
     print(line.rstrip())
+
+#C语言学习笔记
+filename = 'text_files\learning_python.txt'
+
+with open(filename) as f:
+    lines = f.readlines()
+
+print('\n')
+
+for line in lines:
+    #删除末尾的换行符，再将Python替换为C
+    print(line.rstrip().replace('Python','C'))
