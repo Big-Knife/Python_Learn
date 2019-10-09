@@ -26,5 +26,5 @@ with open(filename) as f:
 print('\n')
 
 for line in lines:
-    #删除末尾的换行符，再将Python替换为C
+    #删除末尾的换行符，再将Python替换为C,连续调用两个方法叫串接
     print(line.rstrip().replace('Python','C'))
