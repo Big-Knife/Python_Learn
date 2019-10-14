@@ -9,12 +9,16 @@ name = input("what's your name?")
 with open(filename,'w') as file_object:
     file_object.write(name)
 
+
+
 filename = 'text_files\guest_book.txt'
 
 print("Enter 'quit' when you are finished.")
-while Ture:
+while True:
     name = input("\n What's your name?")
-    if name == 'quit'
+    if name == 'quit':
         break
-    else::
-    with open(filename,)
+    else:
+        with open(filename,'a') as file_object:
+            file_object.write(name + "\n")
+        print("Hi " + name + ", you've been added to the guest book.")
