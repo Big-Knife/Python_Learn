@@ -10,6 +10,7 @@ def get_stored_username():
         return None
     else:
         return username
+
 def get_new_username():
     '''提示用户输入用户名'''
     username = input("What is your name?")
