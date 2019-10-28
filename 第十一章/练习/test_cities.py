@@ -16,4 +16,4 @@ class CitiesTestCase(unittest.TestCase):
         self.assertEqual(santiago_chile, 'Santiago,Chile - population 5000000')
 
 
-unittest.main()
+unitt
