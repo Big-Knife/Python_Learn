@@ -1,9 +1,9 @@
 class Settings():
-    """储存《外星人入侵》夫人所有设置的类"""
+    """A class to store all settings for Alien Invasion."""
 
     def __init__(self):
-        """初始化游戏的设置"""
-        # 屏幕设置
+        """Initialize the game's settings."""
+        # Screen settings.
         self.screen_width = 1200
         self.screen_height = 800
-        self.bg_color = (230,230,230)
+        self.bg_color = (230, 230, 230)
