@@ -6,7 +6,7 @@ import pygame
 from bullet import Bullet
 
 
-def check_keydown_events(event,ai_settings, ship, bullets):
+def check_keydown_events(event, ai_settings, screen, ship, bullets):
     """响应按键"""
     if event.key == pygame.K_RIGHT:
         ship.moving_right = True
@@ -16,6 +16,7 @@ def check_keydown_events(event,ai_settings, ship, bullets):
         # 创建一颗子弹，并将其加入到编组bullets中
         new_bullet = Bullet(ai_settings, screen, ship)
         bullets.add(new_bullet)
+
 
 def check_keyup_events(event, ship):
     """响应松开"""
