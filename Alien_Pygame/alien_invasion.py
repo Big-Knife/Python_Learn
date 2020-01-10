@@ -33,7 +33,13 @@ def run_game():
         # 监视键盘和鼠标事件
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
-        bullets.update()
+        gf.update_bullets(bullets)
+
+        # 删除已消失的子弹
+        for bullet in bullets.copy():
+            if bullet.rect.bottom <= 0:
+                bullet.remove(bullet)
+
         # 每次循环时都重绘屏幕
         gf.update_screen(ai_settings, screen, ship, bullets)
 
