@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Alien(Sprite):
     """表示单个外星人的类"""
 
@@ -14,3 +15,14 @@ class Alien(Sprite):
         self.image = pygame.load('image/alien.bmp')
         self.rect = self.image.get_rect()
 
+        # 每个外星人最初都在屏幕左上角附近
+        self.rect.x = self.rect.width
+        self.rect.y = self.rect.height
+
+        # 存储外形人的精确位置
+        self.x - float(self.rect.x)
+
+
+    def blitme(self):
+        """在指定位置绘制外星人"""
+        self.screen.bilt(self.image, self.rect)
